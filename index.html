@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monney - Gerenciador Financeiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-column">
+      <h1>Monney - Gerenciador Financeiro</h1>
+      <div class="form-group">
+        <label for="salary">Salário:</label>
+        <input type="number" id="salary" placeholder="Salário recebido no mês">
+        <button onclick="addSalary()">Adicionar Salário</button>
+      </div>
+      <div class="form-group">
+        <label for="description">Descrição:</label>
+        <input type="text" id="description" placeholder="Descrição da transação">
+      </div>
+      <div class="form-group">
+        <label for="amount">Valor:</label>
+        <input type="number" id="amount" placeholder="Valor da transação">
+      </div>
+      <div class="form-group">
+        <label for="month">Mês:</label>
+        <select id="month">
+          <option value="jan">Janeiro</option>
+          <option value="feb">Fevereiro</option>
+          <option value="mar">Março</option>
+          <option value="mar">Abril</option>
+          <option value="mar">Maio</option>
+          <option value="mar">Junho</option>
+          <option value="mar">Julho</option>
+          <option value="mar">Agosto</option>
+          <option value="mar">Setembro</option>
+          <option value="mar">Outubro</option>
+          <option value="mar">Novembro</option>
+          <option value="mar">Dezembro</option>
+          <!-- Adicione opções para outros meses aqui -->
+        </select>
+      </div>
+      <button onclick="addTransaction()">Adicionar Transação</button>
+      <div id="current-balance">Saldo Atual: <span id="balance">0,00</span></div>
+      <button id="clear-balance-btn" onclick="confirmClearBalance()">Zerar Saldo Atual</button>
+      <div class="transaction-list">
+        <h2>Lista de Transações</h2>
+        <div id="transaction-list"></div>
+      </div>
+    </div>
+    <div class="right-column">
+      <table id="financial-results">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody id="financial-results-body">
+          <!-- Aqui serão adicionadas as linhas da tabela via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  
+  <div class="chart-container">
+    <div class="chart-bar" style="height: 100px;"></div>
+    <div class="chart-bar positive" style="height: 150px;"></div>
+    <div class="chart-bar" style="height: 80px;"></div>
+  </div>
+  
+
+
+  <footer>
+    <p>&copy; 2024 Planilha Financeira</p>
+  </footer>  
+  <script src="script.js"></script>
+</body>
+</html>
